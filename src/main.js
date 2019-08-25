@@ -1,9 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
+import BootstrapVue from 'bootstrap-vue'
 import router from './router'
 import store from './store'
+import axios from 'axios'
+
+import '@/assets/app.scss';
 
 Vue.config.productionTip = false
+Vue.use(BootstrapVue, axios);
 
 new Vue({
   router,
