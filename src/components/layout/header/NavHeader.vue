@@ -30,7 +30,7 @@
                             <transition name="input-width">
                                 <b-form-input size="sm" class="mr-sm-2 nav-search" name="search" placeholder="Search..."></b-form-input>
                             </transition>
-                            <b-link href="#" v-b-modal.modal-3 id="menuCartQuantity"> <i class="icon-briefcase-1"></i> <span class="menuCartNum">1</span></b-link>
+                            <b-link href="#" @click="$bvModal.show('modal-cart-items')" id="menuCartQuantity"> <i class="icon-briefcase-1"></i> <span class="menuCartNum">1</span></b-link>
                         </b-nav-form>
 
                     </b-navbar-nav>
@@ -93,7 +93,7 @@ export default {
             .menuCartNum{
                 background: white;
                 color: #f62f5e;
-                padding: 2px 5px;
+                padding: 2px 6px;
                 border-radius: 50%;
                 position: relative;
                 top: -10px;

@@ -13,7 +13,7 @@
             </b-col>
             <b-col sm="12" lg="3">
                 <span class="pr-2"><b-img :src="image" fluid alt="flag"></b-img> GBR</span>
-                <b-link href="#" v-b-modal.modal-3 id="menuCartLink"> <i class="icon-briefcase-1"></i> <span class="menuCartNum">1</span></b-link>
+                <ItemsInCart />
                 <span class="pr-0">Your Bag:</span><span id="menuCartTotalPrice">$14.99</span>
             </b-col>
         </b-row>
@@ -27,12 +27,14 @@
 <script>
 import Login from '../login';
 import Register from '../register';
+import ItemsInCart from '../../items-in-cart';
 
 export default {
   name: "topHeader",
   components: {
     Login,
-    Register
+    Register,
+    ItemsInCart
   },
   data() {
       return {
@@ -59,18 +61,6 @@ export default {
                 &:hover{
                     background: #efefef;
                 }
-            }
-        }
-        #menuCartLink{
-            color: black;
-            .menuCartNum{
-                background: red;
-                color: white;
-                padding: 3px 6px;
-                border-radius: 50%;
-                position: relative;
-                top: -10px;
-                left: -10px;
             }
         }
     }
