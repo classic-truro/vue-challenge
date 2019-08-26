@@ -4,15 +4,18 @@
       <AppHeader></AppHeader>
     </div>
     <router-view/>
+    <Footer />
   </div>
 </template>
 
 <script>
 import AppHeader from './components/layout/header';
+import Footer from './components/layout/footer';
 
 export default {
   components: {
-    AppHeader
+    AppHeader,
+    Footer
   }
 }
 </script>
