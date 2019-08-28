@@ -37,16 +37,15 @@ export default {
     ItemsInCart
   },
   data() {
-      return {
-        image: require('@/assets/images/flag.png')
-      }
+    return {
+    image: require('@/assets/images/flag.png')
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
     .top-nav{
-        position: static;
         a{
             color: red;
             &:hover{

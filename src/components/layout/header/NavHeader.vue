@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-navbar toggleable="lg" type="dark" variant="dark" class="nav-header text-center">
+        <b-navbar toggleable="lg" type="dark" id="sticky-navbar" variant="dark" class="nav-header text-center">
             <b-container>
                 <b-navbar-brand href="#" class="logo">SHOPMATE</b-navbar-brand>
 
@@ -46,7 +46,7 @@
 
 <script>
 export default {
-    name: "navHeader"
+    name: "navHeader",
 };
 </script>
 

@@ -34,7 +34,7 @@
             font-size: 25px;
             text-decoration: none;
             &:hover{
-                color: red;
+                color: #f62f5e;
             }
         }
         .social-media-links{

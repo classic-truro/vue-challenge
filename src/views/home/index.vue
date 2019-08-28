@@ -1,6 +1,17 @@
 <template>
     <div>
         <b-container>
+            <b-row class="mt-5">
+                <b-col md="4">
+                    <ItemsFilter />
+                </b-col>
+                <b-col md="8">
+                    
+                </b-col>
+            </b-row>
+        </b-container>
+
+        <b-container>
             <b-row class="banner mt-5">
                 <b-col md="12">
                     <div>
@@ -12,7 +23,7 @@
         </b-container>
 
         <b-container>
-            <b-row class="subscribe p-4 mt-4 mb-4">
+            <b-row class="subscribe p-4 mt-5 mb-5">
                 <b-col md="7 mt-2">
                     <span>SUBSCRIBE FOR SHOP NEWS, UPDATES AND SPECIAL OFFERS</span>
                 </b-col>
@@ -35,8 +46,12 @@
 </template>
 
 <script>
+import ItemsFilter from '../../components/items-filter';
 export default {
-    name: 'home'
+    name: 'home',
+    components: {
+        ItemsFilter
+    }
 }
 </script>
 
