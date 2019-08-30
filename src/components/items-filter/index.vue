@@ -25,12 +25,28 @@
             </div>
             <span>Price Range</span>
             <div class="mt-2 mb-3 pt-4">
-                <vue-range-slider :bg-style="bgStyle" :tooltip-style="tooltipStyle" :process-style="processStyle" v-model="value"></vue-range-slider>
-                <small class="float-left">£ 375</small><small class="float-right">£ 500</small>
+                <vue-range-slider 
+                    :bg-style="bgStyle" 
+                    :tooltip-style="tooltipStyle" 
+                    :process-style="processStyle" 
+                    v-model="value"></vue-range-slider>
+                <small class="float-left">£ 0</small><small class="float-right">£ 100</small>
+            </div><br/>
+            <span>Search keyword</span>
+            <div class="mt-2 mb-3">
+                <b-form-input
+                    id="search"
+                    class="search"
+                    v-model="search"
+                    type="text"
+                    required
+                    placeholder="Enter a keyword to search...">
+                </b-form-input>
             </div>
         </div>
         <div class="items-apply text-muted p-4">
-            
+            <b-button variant="danger" class="apply-btn mr-3">Apply</b-button>
+            <b-button class="reset-btn"><i class="icon-cancel"></i>Reset</b-button>
         </div>
     </div>
 </template>
@@ -46,14 +62,16 @@ export default {
     },
     data() {
         return {
-            value: [0, 500]
+            value: [0, 100],
+            search: ''
         }
     },
     created() {
         this.min = 0;
-        this.max = 500;
+        this.max = 100;
         this.bgStyle = {
             height: '3px',
+            width: '190px',
             backgroundColor: '#ffb0c2',
             boxShadow: 'inset 0.5px 0.5px 3px 1px rgba(0,0,0,.36)'
         }
@@ -87,24 +105,41 @@ export default {
             border-radius: 50%;
         }
         .size-btn{
-           background: #dcdbdb;
-           border: none;
-           border-radius: 0;
-           font-size: 12px;
-           color: #333;
-           padding: 5px 10px;
-           width: 70px;
-           &:focus{
-               background: #dc3545;
-               color: white;
-               box-shadow: none;
-           }
+            background: #dcdbdb;
+            border: none;
+            border-radius: 0;
+            font-size: 12px;
+            color: #333;
+            padding: 5px 10px;
+            width: 60px;
+            &:focus{
+                background: #dc3545;
+                color: white;
+                box-shadow: none;
+            }
         }
-        .price-range{
-
+        .search{
+            &:focus{
+                border: 2px solid #dc3545;
+                box-shadow: none;
+            }
         }
     }
-    .items-search{
-
+    .items-apply{
+        display: flex;
+        align-items: center;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        justify-content: center;
+        background-color: #fafafa;
+        .apply-btn{
+            border-radius: 30px;
+            width: 100px;
+        }
+        .reset-btn{
+            border: none;
+            background: transparent;
+            color: #dc3545;
+        }
     }
 </style>

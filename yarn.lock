@@ -9698,6 +9698,16 @@ vue-router@^3.0.3:
   resolved "https://registry.npm.taobao.org/vue-router/download/vue-router-3.1.2.tgz#2e0904703545dabdd42b2b7a2e617f02f99a1969"
   integrity sha1-LgkEcDVF2r3UKyt6LmF/AvmaGWk=
 
+vue-star-rating@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/vue-star-rating/-/vue-star-rating-1.6.1.tgz#160cf66e6af4597180fd2552df5d03d590ec40d4"
+  integrity sha512-JSmVx16rcxyw4Ma6YQ5DnIExyjF4IFf/ypxh3zfmtFZzE/hjswDT0fLn1vF4ERxDbAp0nHA3u51BYFbA8gyYyQ==
+
+vue-stripe-checkout@^3.0.0-beta.8:
+  version "3.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/vue-stripe-checkout/-/vue-stripe-checkout-3.0.0-beta.8.tgz#36df8d2bfa89ef170550a340b3b1d33985cc5d0e"
+  integrity sha512-u+stSBBCEon2K+CCQAxJ77V0mV50yj39sa3D8wVtok7A9vE46t2ZVkU/wMjCTEoKG/AvWFuhQS/ruorKxw1MSA==
+
 vue-style-loader@^4.1.0:
   version "4.1.2"
   resolved "https://registry.npm.taobao.org/vue-style-loader/download/vue-style-loader-4.1.2.tgz#dedf349806f25ceb4e64f3ad7c0a44fba735fcf8"

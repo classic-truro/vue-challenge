@@ -5,8 +5,11 @@
 .icon-minus:before { content: '\e803'; } /* '' */
 .icon-key:before { content: '\e804'; } /* '' */
 .icon-adult:before { content: '\e805'; } /* '' */
+.icon-star:before { content: '\e806'; } /* '' */
 .icon-search:before { content: '\e807'; } /* '' */
 .icon-briefcase-1:before { content: '\e808'; } /* '' */
+.icon-calendar:before { content: '\e809'; } /* '' */
+.icon-credit-card:before { content: '\e80a'; } /* '' */
 .icon-pound:before { content: '\f154'; } /* '' */
 .icon-twitter-circled:before { content: '\f30a'; } /* '' */
 .icon-facebook-circled:before { content: '\f30d'; } /* '' */

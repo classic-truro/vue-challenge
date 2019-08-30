@@ -2,7 +2,7 @@
     <div>
         <b-navbar toggleable="lg" type="dark" id="sticky-navbar" variant="dark" class="nav-header text-center">
             <b-container>
-                <b-navbar-brand href="#" class="logo">SHOPMATE</b-navbar-brand>
+                <b-navbar-brand href="/" class="logo">SHOPMATE</b-navbar-brand>
 
                 <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

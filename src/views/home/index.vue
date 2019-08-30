@@ -2,11 +2,17 @@
     <div>
         <b-container>
             <b-row class="mt-5">
-                <b-col md="4">
+                <b-col md="3">
                     <ItemsFilter />
                 </b-col>
-                <b-col md="8">
-                    
+                <b-col md="9">
+                    <b-container>
+                        <b-row>
+                            <b-col md="4" v-for="product in allProducts" :key="product.product_id">
+                                <Product :product="product"/>
+                            </b-col>
+                        </b-row>
+                    </b-container>
                 </b-col>
             </b-row>
         </b-container>
@@ -46,11 +52,24 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 import ItemsFilter from '../../components/items-filter';
+import Product from '../../components/product';
+
 export default {
     name: 'home',
     components: {
-        ItemsFilter
+        ItemsFilter,
+        Product
+    },
+    computed: {
+        ...mapGetters(["allProducts"])
+    },
+    methods: {
+        ...mapActions(["getAllProducts"])
+    },
+    created() {
+        this.getAllProducts();
     }
 }
 </script>

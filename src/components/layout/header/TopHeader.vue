@@ -13,7 +13,7 @@
             </b-col>
             <b-col sm="12" lg="3">
                 <span class="pr-2"><b-img :src="image" fluid alt="flag"></b-img> GBR</span>
-                <ItemsInCart />
+                <ShoppingCart />
                 <span class="pr-0">Your Bag:</span><span id="menuCartTotalPrice">$14.99</span>
             </b-col>
         </b-row>
@@ -27,14 +27,14 @@
 <script>
 import Login from '../login';
 import Register from '../register';
-import ItemsInCart from '../../items-in-cart';
+import ShoppingCart from '../../shopping-cart';
 
 export default {
   name: "topHeader",
   components: {
     Login,
     Register,
-    ItemsInCart
+    ShoppingCart
   },
   data() {
     return {
