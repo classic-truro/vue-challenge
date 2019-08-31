@@ -119,6 +119,7 @@ export default {
     }
     .product-details{
         box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+        background: #fff;
         .thumbnail{
             max-width: 70% !important;
             cursor: pointer;

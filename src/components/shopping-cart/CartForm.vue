@@ -95,6 +95,13 @@ export default {
     .cart-form{
         padding: 3%;
         box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+        input{
+            padding: 25px 10px;
+            box-shadow: none;
+            &:focus{
+                border: 2px solid rgb(245, 68, 68);
+            }
+        }
     }
     .select{
         small{
