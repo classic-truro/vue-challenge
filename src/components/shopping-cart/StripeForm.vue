@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="stripe">
     <vue-stripe-checkout
         ref="checkoutRef"
         :image="image"
@@ -47,3 +47,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+
+</style>

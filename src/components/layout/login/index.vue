@@ -5,12 +5,13 @@
             <div class="p-3 text-center">
                 <span class="my-4 header-label">Log In</span>
                 <b-link class="close-icon float-right" @click="$bvModal.hide('modal-login')"><i class="icon-cancel"></i></b-link>
-                <b-form class="m-3 p-5 login-form">
+                <b-form class="m-3 p-5 login-form" id="signInForm">
                     <b-form-group
                         id="form-group-email"
                     >
                         <b-form-input
                         id="email"
+                        name="email"
                         v-model="email"
                         type="email"
                         required
@@ -21,16 +22,17 @@
                     <b-form-group id="form-group-pass">
                         <b-form-input
                         id="password"
+                        name="password"
                         v-model="password"
                         required
                         placeholder="Password *"
                         ></b-form-input>
                         <i class="input-icon icon-key"></i>
                     </b-form-group>     
-                    <b-button type="submit" variant="danger" block>LOG IN</b-button>            
+                    <b-button type="submit" variant="danger" id="btnFormSignIn" block>LOG IN</b-button>            
                     <br/><span>- or -</span><br/><br/>
-                    <b-button variant="outline-secondary" block>Login with Facebook</b-button>
-                    <b-button variant="outline-secondary" block>Login with Google</b-button>
+                    <b-button variant="outline-secondary" class="btnFacebook" block>Login with Facebook</b-button>
+                    <b-button variant="outline-secondary" id="btnGoogle" block>Login with Google</b-button>
                 </b-form>
                 <p><b-link href="#" @click="$bvModal.hide('modal-login'); $bvModal.show('modal-register')">Register / Signup</b-link></p>
             </div>

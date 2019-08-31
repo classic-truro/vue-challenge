@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-container>
-            <b-row class="product-detail mt-5 mb-2  p-5">
+            <b-row class="product-details mt-5 mb-2  p-5">
                 <b-col sm="6" md="6">
                     <b-img :src="imageUrl(product.thumbnail)" fluid-grow alt="Fluid image" class="thumbnail"></b-img><br/>
                     <b-img v-if="product.image" :src="imageUrl(product.image)" rounded="0" alt="Not rounded image" class="m-3 small-thumbnail"></b-img>
@@ -18,40 +18,40 @@
                         </ul>
                     </div>
                     <div class="user-review mt-2 mb-3">
-                        <span v-for="n in 5" :key="n">
+                        <span v-for="n in 5" :key="n" id="review">
                             <i class="icon-star" :class="{'star-color': n < 4}"></i>
                         </span>
                     </div>
                     <div class="name mt-2 mb-3">
-                        <span>{{product.name}}</span>
+                        <span class="product-details-title">{{product.name}}</span>
                     </div>
                     <div class="price mt-2 mb-3">
                         <span class="price" v-if="product.discounted_price !== '0.00'"><strike>£ {{product.discounted_price}}</strike> |</span><span class="price"> £ {{product.price}}</span>
                     </div>
                     <span class="text-muted">Color</span>
                     <div class="mt-2 mb-3">
-                        <b-button class="color-btn m-1 p-2" variant="success"></b-button>
-                        <b-button class="color-btn m-1 p-2" variant="info"></b-button>
-                        <b-button class="color-btn m-1 p-2" variant="warning"></b-button>
-                        <b-button class="color-btn m-1 p-2" variant="primary"></b-button>
-                        <b-button class="color-btn m-1 p-2" variant="dark"></b-button>
-                        <b-button class="color-btn m-1 p-2" variant="danger"></b-button>
+                        <b-button class="m-1 p-2 product-details-color" variant="success"></b-button>
+                        <b-button class="m-1 p-2 product-details-color" variant="info"></b-button>
+                        <b-button class="m-1 p-2 product-details-color" variant="warning"></b-button>
+                        <b-button class="m-1 p-2 product-details-color" variant="primary"></b-button>
+                        <b-button class="m-1 p-2 product-details-color" variant="dark"></b-button>
+                        <b-button class="m-1 p-2 product-details-color" variant="danger"></b-button>
                     </div>
                     <span class="text-muted">Size</span>
                     <div class="mt-2 mb-3">
-                        <b-button class="size-btn m-1" variant="secondary">XS</b-button>
-                        <b-button class="size-btn m-1" variant="secondary">S</b-button>
-                        <b-button class="size-btn m-1" variant="secondary">M</b-button>
-                        <b-button class="size-btn m-1" variant="secondary">L</b-button>
-                        <b-button class="size-btn m-1" variant="secondary">XL</b-button>
+                        <b-button class="m-1 product-details-size" variant="secondary">XS</b-button>
+                        <b-button class="m-1 product-details-size" variant="secondary">S</b-button>
+                        <b-button class="m-1 product-details-size" variant="secondary">M</b-button>
+                        <b-button class="m-1 product-details-size" variant="secondary">L</b-button>
+                        <b-button class="m-1 product-details-size" variant="secondary">XL</b-button>
                     </div>
                     <div class="mt-2 mb-3">
                         <b-button class="quantity-btn mr-2"><i class="icon-minus"></i></b-button>
-                        <span class="quantity-display pt-3 pl-4 pb-3 pr-4">2</span>
+                        <b-input type="text" value="2" disabled name="product-details-quantity" class="quantity-display"></b-input>
                         <b-button class="quantity-btn ml-2"><i class="icon-plus"></i></b-button>
                     </div>
                     <div class="mt-2 mb-3">
-                        <b-button variant="danger" class="add-to-card">Add to Cart</b-button>
+                        <b-button variant="danger" class="add-to-card" id="btnCart">Add to Cart</b-button>
                     </div>
                 </b-col>
             </b-row>
@@ -67,7 +67,7 @@
                         class="mb-5 mt-5"
                         placeholder="Enter review"
                     ></b-form-input>
-                    <b-button variant="danger" class="add-review-btn btn-block mb-5 mt-5">Add to Cart</b-button><br/>
+                    <b-button variant="danger" class="add-review-btn btn-block mb-5 mt-5" id="addReview">Add Review</b-button><br/>
                     <div class="text-center">
                         <span class="login" @click="$bvModal.show('modal-login')">Login</span><span> to Add a Review.</span>
                     </div>
@@ -117,7 +117,7 @@ export default {
     .star-color{
         color: #ffc94f;
     }
-    .product-detail{
+    .product-details{
         box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
         .thumbnail{
             max-width: 70% !important;
@@ -153,10 +153,10 @@ export default {
             font-size: 24px;
             font-weight: 700;
         }
-        .color-btn{
+        .product-details-color{
             border-radius: 50%;
         }
-        .size-btn{
+        .product-details-size{
             background: #dcdbdb;
             border: none;
             border-radius: 0;
@@ -178,6 +178,9 @@ export default {
         }
         .quantity-display{
             box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+            width: 10%;
+            display: inline-block;
+            text-align: center;
         }
         .add-to-card{
             border-radius: 30px;

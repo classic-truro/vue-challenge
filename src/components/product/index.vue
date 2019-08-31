@@ -1,12 +1,12 @@
 <template>
     <div>
-        <div class="product-card-link mb-3">
-            <b-link :href="`/product/${product.product_id}`">
+        <div class="product-card mb-3">
+            <b-link :href="`/product/${product.product_id}`" class="product-card-link">
                 <b-img :src="imageUrl(product.thumbnail)" class="product-img" fluid alt="Fluid image"></b-img>
                 <span class="sale-tag" v-if="product.discounted_price != '0.00'">SALE</span>
-                <b-button variant="danger" class="view-btn">View</b-button>
+                <b-button variant="danger" class="product-btn-cart">View</b-button>
                 <div class="description p-3 text-center">
-                    <span class="name">{{product.name}}</span><br/>
+                    <span class="product-card-title">{{product.name}}</span><br/>
                     <span class="price" v-if="product.discounted_price !== '0.00'"><strike>£ {{product.discounted_price}}</strike> |</span><span class="price"> £ {{product.price}}</span>
                 </div>
             </b-link>
@@ -32,12 +32,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .product-card-link{
+    .product-card{
         background: #fff;
         .product-img{
             min-height: 200px;
         }
-        .view-btn{
+        .product-btn-cart{
             display: none;
             background: #e83e8c;
             border-radius: 20px;
@@ -49,7 +49,7 @@ export default {
         }
         &:hover{
             opacity: 0.5;
-            .view-btn{
+            .product-btn-cart{
                 display: block;
             }
         }
@@ -66,7 +66,7 @@ export default {
             color: #333;
             text-decoration: none;
         }
-        .name{
+        .product-card-title{
             font-size: 18px;
         }
         .price{

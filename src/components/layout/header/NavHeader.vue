@@ -2,24 +2,23 @@
     <div>
         <b-navbar toggleable="lg" type="dark" id="sticky-navbar" variant="dark" class="nav-header text-center">
             <b-container>
-                <b-navbar-brand href="/" class="logo">SHOPMATE</b-navbar-brand>
-
+                <router-link to="/" class="logo">SHOPMATE</router-link>
                 <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-                <b-collapse id="nav-collapse" is-nav class="ml-5 navlinks">
+                <b-collapse id="nav-collapse" is-nav class="ml-5 departments categories">
                     <b-navbar-nav>
-                        <b-nav-item-dropdown text="Regional" class="ml-3" no-caret>
-                            <b-dropdown-item href="#">French</b-dropdown-item>
-                            <b-dropdown-item href="#">Italian</b-dropdown-item>
-                            <b-dropdown-item href="#">Irish</b-dropdown-item>
+                        <b-nav-item-dropdown text="Regional" class="ml-3 department" no-caret>
+                            <b-dropdown-item class="department category" href="#">French</b-dropdown-item>
+                            <b-dropdown-item class="department category" href="#">Italian</b-dropdown-item>
+                            <b-dropdown-item class="department category" href="#">Irish</b-dropdown-item>
                         </b-nav-item-dropdown>
-                        <b-nav-item-dropdown text="Nature" class="ml-3" no-caret>
-                            <b-dropdown-item href="#">Animal</b-dropdown-item>
-                            <b-dropdown-item href="#">Flower</b-dropdown-item>
+                        <b-nav-item-dropdown text="Nature" class="ml-3 department" no-caret>
+                            <b-dropdown-item class="department category" href="#">Animal</b-dropdown-item>
+                            <b-dropdown-item class="department category" href="#">Flower</b-dropdown-item>
                         </b-nav-item-dropdown>
                         <b-nav-item-dropdown text="Sesonal" class="ml-3" no-caret>
-                            <b-dropdown-item href="#">Christmas</b-dropdown-item>
-                            <b-dropdown-item href="#">Valentines</b-dropdown-item>
+                            <b-dropdown-item class="department category" href="#">Christmas</b-dropdown-item>
+                            <b-dropdown-item class="department category" href="#">Valentines</b-dropdown-item>
                         </b-nav-item-dropdown>
                     </b-navbar-nav>
 
@@ -57,8 +56,9 @@ export default {
             color: #f62f5e !important;
             letter-spacing: 4px;
             font-size: 26px;
+            text-decoration: none;
         }
-        .navlinks .navbar-nav .nav-item .nav-link{
+        .departments .navbar-nav .nav-item .nav-link{
             color: white;
         }
         .nav-icon-search{
