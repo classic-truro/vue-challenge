@@ -56,5 +56,14 @@ yarn run lint
 yarn run test:unit
 ```
 
+### Docker
+
+* Build image
+
+`docker build -t vue_challenge .`
+
+* Run container
+`docker run --rm -p 8000:80 vue_challenge`
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
