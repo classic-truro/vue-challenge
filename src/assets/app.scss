@@ -1,0 +1,17 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+@font-face {
+    font-family: 'Open Sans';
+    src: url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
+}
+@import './css/animation.css';
+@import './css/fontello-codes.css';
+@import './css/fontello-embedded.css';
+@import './css/fontello-ie7-codes.css';
+@import './css/fontello-ie7.css';
+@import './css/fontello.css';
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
