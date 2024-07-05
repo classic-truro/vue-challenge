@@ -1,11 +1,11 @@
-# Turing Front-end Challenge Template
+# Front-end Challenge Template
 
 ## Important Note
 Before using this template, read the template guide [here](https://docs.google.com/document/d/1F68KceOe2lUi3KDVcBEcOxwwRsZDNLmkFFYrIAcV6BQ/edit?usp=sharing)
 
 ## Introduction
 
-> **Turing Front-end Vue App Challenge template** is an e-commerce application template built using Vue that enables users shop for goods in the plaform. To complete this challenge, you need to implement all the requirement in the frontend challenge doc. You can modify the design to suit your purpose, but ensure you use all our default predefined Id and classes.
+> **Front-end Vue App Challenge template** is an e-commerce application template built using Vue that enables users shop for goods in the plaform. To complete this challenge, you need to implement all the requirement in the frontend challenge doc. You can modify the design to suit your purpose, but ensure you use all our default predefined Id and classes.
 Comments are added to the top of most of the component file which serve as a guide to what is expected from the finished product.
 
 The App has been built using Vue.
